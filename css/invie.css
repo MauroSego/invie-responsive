@@ -28,7 +28,7 @@ input:focus, textarea:focus{
 	background: lightgray;
 }
 .contenedor{
-	width: 800px;
+	max-width: 800px;
 	margin: auto;	
 	position: relative;
 }
@@ -56,14 +56,6 @@ input:focus, textarea:focus{
 .titulo span{
 	text-decoration: underline;
 }
-.title-a {
-	font-size: 24px;
-	margin-top: 0;
-}
-.title-b{
-	font-size: 50px;
-	margin-bottom: 20px;
-}
 .guitarras{
 	color: #1f313c;
 	margin-bottom: 60px;
@@ -71,6 +63,14 @@ input:focus, textarea:focus{
 .guitarras h2 {
 	font-size: 35px;
 	font-family: 'Montserrat', sans-serif;
+}
+.title-a {
+	font-size: 24px;
+	margin-top: 0;
+}
+.title-b{
+	font-size: 50px;
+	margin-bottom: 20px;
 }
 .portada{
 	color: rgb(250, 250, 255);
@@ -191,8 +191,45 @@ margin-top: 10px;
 	margin: 50px 0;
 }
  @media screen and (max-width: 800px){
- 	body{
- 		background-color: peru;
- 		border: 10px solid #aa00ff;
- 	}
+	/*body{
+		border: 10px solid red;
+	}*/
+	/*portada*/
+	.titulo {
+		font-size: 45px;
+		margin-top: 30px;
+	}
+	.title-a {
+		font-size: 18px;
+	}
+	.portada{
+		height: auto;
+	}
+	.portada .button{
+		display: inline-block;
+		margin-bottom: 30px;
+	}
+
+	/*Guitarras*/
+	.guitarras{
+		text-align: center;
+	}
+	.izquierda, .derecha{
+		float: none;
+		position: static;
+	}
+	.title-b{
+		margin: 0;
+	}
+	.guitarra li{
+		list-style: none;
+	}
+	.guitarra.b{
+		height: auto;
+	}
+	.contenedor-guitarra-b{
+		margin: 0;
+		position: static;
+	}
+	/*Guitarras*/
  }
