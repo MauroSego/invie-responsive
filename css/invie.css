@@ -190,3 +190,9 @@ margin-top: 10px;
 .tabla{
 	margin: 50px 0;
 }
+ @media screen and (max-width: 800px){
+ 	body{
+ 		background-color: peru;
+ 		border: 10px solid #aa00ff;
+ 	}
+ }
