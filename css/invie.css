@@ -397,5 +397,17 @@ margin-top: 10px;
 	}
 
 	/*Guitarras*/
-
+}
+.video-responsive-contenedor{
+	position: relative;
+	padding-top: 56.4%;
+}
+.video-responsive-src{
+	position: absolute;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	top: 0;
+	width: 100%;
+	height: 100%
 }
