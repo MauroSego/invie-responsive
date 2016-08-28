@@ -73,6 +73,7 @@ input:focus, textarea:focus{
 	position: relative;
 }
 .background{
+	background-color: #466173;
 	background-image: url('../images/background.png');
 	background-size: cover;
 }
@@ -222,7 +223,7 @@ input:focus, textarea:focus{
 margin-top: 10px;
 }
 .col2{
-	align-items: flex-start;
+	align-items: stretch;
 }
 .col2 .button{
 	margin-top: 15px;
@@ -234,22 +235,42 @@ margin-top: 10px;
 .burguer-button{
 	background-color: #395667;
 	border-radius: 50%;
+	color: white;
+	cursor: pointer;
 	display: inline-block;
 	height: 40px;
-	line-height: 40px;
-	text-align: center;
-	width: 40px;
-	cursor: pointer;
-	position: absolute;
 	left: 20px;
+	line-height: 40px;
+	position: fixed;
+	text-align: center;
 	top: 20px;
+	width: 40px;
 	z-index: 3;
+	display: none;
 }
- @media screen and (max-width: 800px){
+.video-demo{
+	max-width: 500px;
+	width: 100%;
+	border: 5px solid #3c5b6e;
+}
+.video-demo-contenedor{
+	display: flex;
+	justify-content: center;
+	margin-bottom: 80px;
+}
+@media screen and (max-width: 800px){
 	/*body{
 		border: 10px solid red;
 	}*/
 	/*portada*/
+	.tabla{
+		margin: 50px 20px;
+	}
+	.tabla .contenedor{
+		overflow: auto;
+		border: 1px solid #273b47;
+	}
+
 	.titulo {
 		font-size: 45px;
 		margin-top: 30px;
@@ -266,6 +287,9 @@ margin-top: 10px;
 	}
 
 	/*Guitarras*/
+	.video-demo-contenedor{
+		margin-bottom: 30px;	
+	}
 	.guitarras{
 		text-align: center;
 	}
@@ -336,10 +360,31 @@ margin-top: 10px;
 	.menu li:first-child{
 		margin: 0;
 	}
+	/*Guitarras*/
+	.video-demo{
+		margin: 0 10px;
+	}
+	/*Guitarras*/
+
 }
 @media screen and (max-width: 500px){
 	/*Portada*/
+	.portada .button{
+		display: block;
+	}
+
+
+	.precios .header .logotipo{
+		margin: 50px 0;
+	}
+	.burguer-button{
+		display: block;
+	}
 	.portada .contenedor{
+		position: static;
+	}
+
+	.header, .header .contenedor {
 		position: static;
 	}
 	.menu{
@@ -348,7 +393,7 @@ margin-top: 10px;
 		bottom: 0;
 		display: flex;
 		left: -100%;
-		position: absolute;
+		position: fixed;
 		right: 0;
 		top: 0;
 		width: 100%;
@@ -392,11 +437,19 @@ margin-top: 10px;
 	.title-b{
 		font-size: 30px;
 	}
+	.video-demo-contenedor{
+		margin: 0 10px 30px 10px;
+	}
 	.contenedor-guitarra-a{
 		padding: 0;
 	}
 
 	/*Guitarras*/
+	/*Footer*/
+	.formulario .button{
+	display: block;
+	align-items: stretch;
+	}
 }
 .video-responsive-contenedor{
 	position: relative;
@@ -410,4 +463,11 @@ margin-top: 10px;
 	top: 0;
 	width: 100%;
 	height: 100%
+}
+
+@media screen and (-webkit-min-device-pixel-ratio: 2){
+	.background{
+	background-image: url('../images/background2x.png');
+	background-size: cover;
+}
 }

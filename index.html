@@ -39,8 +39,12 @@
     </section>
     <section class="guitarras contenedor" id="guitarras">
       <h2 class="title-a">Nuestras guitarras</h2><!--guitarras-->
-      <div class="video-responsive-contenedor">
-        <iframe class="video-responsive-src" width="560" height="315" src="https://www.youtube.com/embed/R1dW8M4EqYY" frameborder="0" allowfullscreen></iframe>
+      <div class="video-demo-contenedor">
+        <div class="video-demo">
+          <div class="video-responsive-contenedor">
+            <iframe class="video-responsive-src" width="560" height="315" src="https://www.youtube.com/embed/R1dW8M4EqYY" frameborder="0" allowfullscreen></iframe>
+          </div>
+        </div>
       </div>
       <article class="guitarra"><!--guitarra1 -->
         <img class="derecha" data-src="images/invie-acustica.png|images/invie-acustica2x.png" alt="Guitarra invie acústica" width="350">
@@ -111,6 +115,7 @@
       </div>
     </footer>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/blazy/1.6.2/blazy.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/hammer.js/2.0.8/hammer.min.js"></script>
     <script>
       var $burguerButton = document.getElementById('burguer-button');
       var $menu = document.getElementById('menu');
@@ -133,10 +138,22 @@
         $menu.classList.toggle('active');
         $burguerButton.classList.toggle('icon-close')
       };
+      function showMenu(){
+        $menu.classList.add('active');
+      }
+      function hideMenu(){
+        $menu.classList.remove('active');
+      }
       //Lazy loading
       var bLazy = new Blazy({
           selector: 'img'
       });
+
+      /*Gestos touch*/
+      var $body = document.body;
+      var gestos = new Hammer($body);
+      gestos.on('swipeleft', hideMenu)
+      gestos.on('swiperight', showMenu)
     
     </script>
 	</body>
